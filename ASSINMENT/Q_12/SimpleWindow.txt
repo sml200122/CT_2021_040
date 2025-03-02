@@ -1,0 +1,20 @@
+import javax.swing.JFrame;
+
+public class SimpleWindow {
+    public static void main(String[] args) {
+
+        JFrame appFrame = new JFrame("My First GUI");
+
+
+        appFrame.setSize(300, 200);
+
+
+        appFrame.setLocation(100, 50);
+
+
+        appFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+
+        appFrame.setVisible(true);
+    }
+}

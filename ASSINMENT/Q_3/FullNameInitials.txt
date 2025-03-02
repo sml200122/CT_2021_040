@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class FullNameInitials {
+    public static void main(String[] args) {
+
+        Scanner userInputScanner = new Scanner(System.in);
+
+
+        System.out.print("Enter your first name: ");
+        String firstName = userInputScanner.nextLine();
+
+        System.out.print("Enter your second name: ");
+        String secondName = userInputScanner.nextLine();
+
+        System.out.print("Enter your last name: ");
+        String lastName = userInputScanner.nextLine();
+
+
+        String secondNameInitial = secondName.charAt(0) + ".";
+
+
+        System.out.println("Formatted Name: " + firstName + " " + secondNameInitial + " " + lastName);
+
+
+        userInputScanner.close();
+    }
+}

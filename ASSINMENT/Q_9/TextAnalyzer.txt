@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class TextAnalyzer {
+    public static void main(String[] args) {
+
+        Scanner userInputScanner = new Scanner(System.in);
+
+
+        System.out.print("Enter a text: ");
+        String userText = userInputScanner.nextLine();
+
+
+        userInputScanner.close();
+
+
+        int textLength = userText.length();
+
+
+        if (textLength > 0) {
+            char firstChar = userText.charAt(0);
+            char lastChar = userText.charAt(textLength - 1);
+
+            // Display output
+            System.out.println(textLength);
+            System.out.println(firstChar);
+            System.out.println(lastChar);
+        } else {
+            System.out.println("Error: No text entered.");
+        }
+    }
+}

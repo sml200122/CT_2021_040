@@ -1,0 +1,28 @@
+import javax.swing.*;
+import java.util.Scanner;
+
+public class GUIWindow {
+    public static void main(String[] args) {
+
+        Scanner userInput = new Scanner(System.in);
+
+
+        System.out.print("Enter the title of the window: ");
+        String title = userInput.nextLine();
+
+        System.out.print("Enter the width of the window: ");
+        int width = userInput.nextInt();
+
+        System.out.print("Enter the height of the window: ");
+        int height = userInput.nextInt();
+
+
+        userInput.close();
+
+
+        JFrame appWindow = new JFrame(title);
+        appWindow.setSize(width, height);
+        appWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        appWindow.setVisible(true);
+    }
+}

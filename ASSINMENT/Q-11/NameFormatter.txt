@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class NameFormatter {
+    public static void main(String[] args) {
+
+        Scanner inputScanner = new Scanner(System.in);
+
+
+        System.out.print("Enter your full name (First Middle Last): ");
+        String fullName = inputScanner.nextLine();
+
+
+        inputScanner.close();
+
+
+        String[] nameParts = fullName.split(" ");
+
+        // Check if there are exactly three parts (First, Middle, Last)
+        if (nameParts.length == 3) {
+            String first = nameParts[0];
+            String middle = nameParts[1];
+            String last = nameParts[2];
+
+            // Get the middle initial
+            char middleInitial = middle.charAt(0);
+
+            // Format and display the output
+            System.out.println(last + ", " + first + " " + middleInitial + ".");
+        } else {
+            System.out.println("Error: Please enter your name in the format 'First Middle Last'.");
+        }
+    }
+}

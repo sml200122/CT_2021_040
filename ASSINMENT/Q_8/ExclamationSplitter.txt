@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class ExclamationSplitter {
+    public static void main(String[] args) {
+
+        Scanner inputScanner = new Scanner(System.in);
+
+
+        System.out.print("Enter a string containing a single exclamation mark (!): ");
+        String inputString = inputScanner.nextLine();
+
+
+        inputScanner.close();
+
+
+        int exclamationPosition = inputString.indexOf('!');
+
+
+        if (exclamationPosition == -1 || inputString.indexOf('!', exclamationPosition + 1) != -1) {
+            System.out.println("Error: The input must contain exactly one exclamation mark.");
+            return;
+        }
+
+
+        String partBefore = inputString.substring(0, exclamationPosition).trim();
+        String partAfter = inputString.substring(exclamationPosition + 1).trim();
+
+
+        System.out.println(partBefore);
+        System.out.println(partAfter);
+    }
+}

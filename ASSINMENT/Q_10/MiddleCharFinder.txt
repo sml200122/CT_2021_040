@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class MiddleCharFinder {
+    public static void main(String[] args) {
+        // Create Scanner object
+        Scanner userInputScanner = new Scanner(System.in);
+
+        // Prompt user for input
+        System.out.print("Enter a word with an odd number of letters: ");
+        String userWord = userInputScanner.nextLine();
+
+        // Close the scanner
+        userInputScanner.close();
+
+        // Get the length of the word
+        int wordSize = userWord.length();
+
+        // Check if the word has an odd length
+        if (wordSize % 2 == 1) {
+            int centerIndex = wordSize / 2; // Calculate middle index
+            char centerChar = userWord.charAt(centerIndex); // Get middle character
+
+            // Display output
+            System.out.println("Middle character: " + centerChar);
+        } else {
+            System.out.println("Error: The word must contain an odd number of letters.");
+        }
+    }
+}

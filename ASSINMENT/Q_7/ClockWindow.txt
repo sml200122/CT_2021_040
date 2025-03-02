@@ -1,0 +1,26 @@
+import javax.swing.*;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Timer;
+import java.util.TimerTask;
+
+public class ClockWindow {
+    public static void main(String[] args) {
+
+        JFrame clockFrame = new JFrame();
+        clockFrame.setSize(400, 200);
+        clockFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        clockFrame.setVisible(true);
+
+
+        Timer clockTimer = new Timer(true);
+        clockTimer.scheduleAtFixedRate(new TimerTask() {
+            @Override
+            public void run() {
+
+                String currentTime = new SimpleDateFormat("hh:mm:ss a").format(new Date());
+                clockFrame.setTitle(currentTime);
+            }
+        }, 0, 1000); // Update every second
+    }
+}

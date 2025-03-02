@@ -1,0 +1,17 @@
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Locale;
+
+public class TodayFullDate {
+    public static void main(String[] args) {
+
+        LocalDate todayDate = LocalDate.now();
+
+
+        DateTimeFormatter fullDateFormatter = DateTimeFormatter.ofPattern("EEEE, MMMM d, yyyy", Locale.ENGLISH);
+
+
+        String formattedTodayDate = todayDate.format(fullDateFormatter);
+        System.out.println(formattedTodayDate);
+    }
+}

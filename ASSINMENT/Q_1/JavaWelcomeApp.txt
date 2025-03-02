@@ -1,0 +1,17 @@
+import javax.swing.*;
+
+public class JavaWelcomeApp {
+    public static void main(String[] args) {
+        // Create a JFrame object
+        JFrame javaFrame = new JFrame("Java Welcome Screen");
+
+        // Set frame size to 800x600 pixels
+        javaFrame.setSize(800, 600);
+
+        // Set the default close operation
+        javaFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        // Make the frame visible
+        javaFrame.setVisible(true);
+    }
+}
